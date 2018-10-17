@@ -11,11 +11,11 @@ struct advertising
 advertising getAdvertising()
 {
     advertising temp;
-    std::cout << "How many ad's your website show today ?";
+    std::cout << "How many ad's your website show today ?"'\n';
     std::cin >> temp.adsCount;
-    std::cout << "How much user's clickPercentage of each ads";
+    std::cout << "How much user's clickPercentage of each ads"'\n';
     std::cin >> temp.clickPercentage;
-    std::cout << "How much you can earn of one click";
+    std::cout << "How much you can earn of one click"'\n';
     std::cin >> temp.eachClickMoney;
     return temp;
 }
