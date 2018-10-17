@@ -20,7 +20,7 @@ advertising getAdvertising()
     return temp;
 }
 
-void printAdvertising（advertising ad）
+void printAdvertising(advertising ad)
 {
     std::cout << "Number of ads show =" << ad.adsCount << '\n';
     std::cout << "User's clickPercentage of each ads =" << ad.clickPercentage << '\n';
