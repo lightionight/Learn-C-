@@ -48,8 +48,8 @@ void printMonsterAttribute（monsterValue monster）
 
 int main()
 {
-  monstervalue ogre = { monstertype::Ogre,"tom" , 127 , 25 , 34};
-  monstervalue slime = { monstertype::slime,"jack" , 127 , 25 , 34};
+  monstertype ogre = { monstertype::Ogre,"tom" , 127 , 25 , 34};
+  monstertype slime = { monstertype::slime,"jack" , 127 , 25 , 34};
   
   printMonsterAttribute(orge);
   printMonsterAttribute(slime);
