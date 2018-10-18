@@ -8,7 +8,7 @@ enum class monstertype
   dragon,
   orc,
   giant_Spider,
-  slime,
+  slime
 };
 
 //构造怪物属性数值
