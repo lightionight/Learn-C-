@@ -41,9 +41,9 @@ std::string getmonsterType(monsterValue monster)
 
 void printMonsterAttribute（monsterValue monster）
 {
-    std::cout << "This " << getmonsterType(monster) << " is named " << monster.name << " has "
-              << "monster.Health" << ",have ATK " << "monster.ATK" << " point and DEF "
-              << "monster.DEF ";
+    std::cout << "This " << getmonsterType(monster) << " is named " << monster.monsterName << " has "
+              << "monster.monsterHealth" << ",have ATK " << "monster.monsterATK" << " point and DEF "
+              << "monster.monsterDEF ";
 }
 
 int main()
