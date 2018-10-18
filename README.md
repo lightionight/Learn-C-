@@ -1,2 +1,2 @@
-# Learn-Cpp
+# Learn
 Persional learn code
