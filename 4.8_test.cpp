@@ -39,7 +39,7 @@ std::string getmonsterType(monsterValue monster)
 
 //打印怪物属性
 
-void printMonsterAttribute（monsterValue monster）
+void printMonsterAttribute(monsterValue monster)
 {
     std::cout << "This " << getmonsterType(monster) << " is named " << monster.monsterName << " has "
               << "monster.monsterHealth" << ",have ATK " << "monster.monsterATK" << " point and DEF "
@@ -48,8 +48,8 @@ void printMonsterAttribute（monsterValue monster）
 
 int main()
 {
-  monstertype ogre = { monstertype::Ogre,"tom" , 127 , 25 , 34};
-  monstertype slime = { monstertype::slime,"jack" , 127 , 25 , 34};
+  monsterValue ogre = {monstertype::ogre,"tom",127,25,34};
+  monsterValue slime = {monstertype::slime,"jack",127,25,34};
   
   printMonsterAttribute(orge);
   std::cout << '\n';
