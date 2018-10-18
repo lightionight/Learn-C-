@@ -1,4 +1,4 @@
-#include <sting>
+#include <string>
 #include <iostream>
 
 //define monster enum class
@@ -15,12 +15,12 @@ enum class monstertype
 
 struct monsterValue
 {
-   monsterType type
+   monsterType type;
    std::string monsterName;
    int         monsterHealth;
    double      monsterATK;
    double      monsterDEF;
-}
+};
 std::string getmonsterType(monsterValue monster)
 {
   if(monster.type == monsterType::ogre)
@@ -56,5 +56,3 @@ int main()
   
   return 0;
 }
-
-   
