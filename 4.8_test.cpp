@@ -23,15 +23,15 @@ struct monsterValue
 };
 std::string getmonsterType(monsterValue monster)
 {
-  if(monster.type == monsterType::ogre)
+  if(monster.type == monstertype::ogre)
     return "Ogre";
-  if(monster.type == monsterType::dragon)
+  if(monster.type == monstertype::dragon)
     return "Dragon";
-  if(monster.type == monsterType::orc)
+  if(monster.type == monstertype::orc)
     return "Orc";
-  if(monster.type == monsterType::giant_Spider)
+  if(monster.type == monstertype::giant_Spider)
     return "Giant Spider";
-  if(monster.type == monsterType::slime)
+  if(monster.type == monstertype::slime)
     return "Slime";
   
   return "Unknown"
@@ -48,8 +48,8 @@ void printMonsterAttribute（monsterValue monster）
 
 int main()
 {
-  monstervalue ogre = { monsterType::Ogre,"tom" , 127 , 25 , 34};
-  monstervalue slime = { monsterType::slime,"jack" , 127 , 25 , 34};
+  monstervalue ogre = { monstertype::Ogre,"tom" , 127 , 25 , 34};
+  monstervalue slime = { monstertype::slime,"jack" , 127 , 25 , 34};
   
   printMonsterAttribute(orge);
   printMonsterAttribute(slime);
