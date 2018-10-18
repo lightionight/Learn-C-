@@ -17,9 +17,9 @@ struct monsterValue
 {
    monstertype type;
    std::string monsterName;
-   int         monsterHealth;
-   double      monsterATK;
-   double      monsterDEF;
+   int monsterHealth;
+   int monsterATK;
+   int monsterDEF;
 };
 std::string getmonsterType(monsterValue monster)
 {
@@ -51,7 +51,7 @@ int main()
   monsterValue ogre = {monstertype::ogre,"tom",127,25,34};
   monsterValue slime = {monstertype::slime,"jack",127,25,34};
   
-  printMonsterAttribute(orge);
+  printMonsterAttribute(ogre);
   std::cout << '\n';
   printMonsterAttribute(slime);
   
