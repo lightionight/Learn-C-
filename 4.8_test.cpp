@@ -15,7 +15,7 @@ enum class monstertype
 
 struct monsterValue
 {
-   monsterType type;
+   monstertype type;
    std::string monsterName;
    int         monsterHealth;
    double      monsterATK;
