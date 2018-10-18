@@ -21,6 +21,7 @@ struct monsterValue
    double      monsterDEF;
 }
 
+void printMonsterAttribute（）
 
    
    
