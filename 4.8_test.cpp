@@ -34,7 +34,7 @@ std::string getmonsterType(monsterValue monster)
   if(monster.type == monstertype::slime)
     return "Slime";
   
-  return "Unknown"
+  return "Unknown";
 }
 
 //打印怪物属性
