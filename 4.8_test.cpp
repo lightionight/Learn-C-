@@ -52,6 +52,7 @@ int main()
   monstertype slime = { monstertype::slime,"jack" , 127 , 25 , 34};
   
   printMonsterAttribute(orge);
+  std::cout << '\n';
   printMonsterAttribute(slime);
   
   return 0;
