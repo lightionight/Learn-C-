@@ -5,13 +5,13 @@ int calculate(int x,int y, char op)
 {
     switch (op)
     {
-        case "+":
+        case '+':
             return x + y;
-        case "-":
+        case '-':
             return x - y;
-        case "*":
+        case '*':
             return x * y;
-        case "%":
+        case '%':
             return x % y;
         default :
             std::cout::<< "calculate fution unknow \n";
@@ -29,7 +29,7 @@ int main()
     int y;
     std::cin >> y;
 
-    std::cout << "Enter a mathematical opratar :";
+    std::cout << "Enter a mathematical opratar : ";
     char op;
     std::cin >> op;
 
