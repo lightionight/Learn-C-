@@ -34,7 +34,6 @@ void letsPlay(){
                 std::cout << "Correct! You win!";
                 loopTime = 8;
             }
-     loopTime = 1;
         
 
     }
