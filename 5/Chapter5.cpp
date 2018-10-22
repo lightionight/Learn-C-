@@ -10,7 +10,7 @@ int prng(){
 //获取用户猜测数字
 int getInput(){
     int i;
-    std::cin << i;
+    std::cin >> i;
     return i;
 }
 
