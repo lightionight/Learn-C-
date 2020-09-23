@@ -1,8 +1,6 @@
 #ifndef _POINTER_GET_INPUT_
 #define _POINTER_GET_INPUT_
-#ifndef _STDIO_H_
-#include <stdio.h>
-#endif
+
 #include <ctype.h>
 
 int getch(void);
