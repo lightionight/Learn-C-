@@ -1,2 +1,2 @@
-# Learn Cplusplus
+# Learn C & C++
 Persional learn code

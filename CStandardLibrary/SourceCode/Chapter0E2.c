@@ -13,8 +13,8 @@ int main(){
 }
 
 int sortArr(int* arr, int arrLength){
-    int sort_Arr[2][arrLength];
-    for(int n = 0; n < arrLength; n++){
+    int n, sort_Arr[2][arrLength];
+    for(n = 0; n < arrLength; n++){
         sort_Arr[0][n] = arr[n];
         sort_Arr[1][n] = n ;
         printf("Sort_arr[0][%d] = %d , Sort_arr[1][%d] = %d\n", n, sort_Arr[1][n], n, sort_Arr[0][n]);
@@ -23,10 +23,11 @@ int sortArr(int* arr, int arrLength){
 }
 
 int maxArea( int* arr, int arrLength){
-    for(int n = 0; n < arrLength; n++){
+    int n;
+    for(n = 0; n < arrLength; n++){
         int temp0, temp1;
         temp0 = temp1 = 0;
-        if(arr[0][n] < arr[0][n + 1])
+        if(arr[0][&n] < arr[0][&n + 1])
         {
             temp0 = arr[0][n];
             temp1 = arr[1][n];
