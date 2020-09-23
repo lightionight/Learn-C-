@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C/C++",
+            "name": "C",
             "type": "cppdbg",
             "request": "launch",
-            "program":"${workspaceFolder}\\DeBugs\\${fileBasenameNoExtension}.exe",
+            "program":"${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe",
             "args":[],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",           

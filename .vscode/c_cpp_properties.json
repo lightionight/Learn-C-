@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "GNUC",
+            "name": "Mingw64",
             "includePath": ["${workspaceFolder}/**"],
             "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
             "windowsSdkVersion": "10.0.18362.0",

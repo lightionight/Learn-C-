@@ -8,7 +8,7 @@
             "args":["-std=gnu11",  
                     "${file}", 
                     "-o", 
-                    "${workspaceFolder}\\DeBugs\\${fileBasenameNoExtension}.exe"
+                    "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 //"cwd": "${workspaceFolder}"
