@@ -1,5 +1,4 @@
 {
     "editor.fontFamily": "IBM Plex Mono, 'Microsoft Yahei', monospace",
-    //"editor.fontFamily": "Consolas, 'Microsoft Yahei UI', monospace",
     "editor.autoIndent": "advanced"
 }

@@ -5,26 +5,7 @@
             "type" :"shell",
             "label": "C",
             "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
-            "args":["-std=gnu11",  
-                    "${file}", 
-                    "-o", 
-                    "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                //"cwd": "${workspaceFolder}"
-            },
-            "problemMatcher":["$gcc"],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-
-        },
-        {
-            "type" :"shell",
-            "label": "Cpp",
-            "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
-            "args":["-std=gnu11",  
+            "args":["-std=c89",  
                     "${file}", 
                     "-o", 
                     "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"
