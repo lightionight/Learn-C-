@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include "PointerGetInput.c"
+/*#include "PointerGetInput.c"*/
 
 void maxArea(int arr[], int *result);
 
@@ -9,6 +9,7 @@ int main(){
     int result = 0;
     maxArea (arr, &result);
     printf("The max Area is %d.\n", result);
+    getchar();
     return 0;
 }
 
