@@ -19,14 +19,21 @@ void maxArea(int arr[], int *result){
     j = i + 1;
     storeValue = result;
     int temp;
-    while (i == i++){
-        while(j == j++){
-            if(*i < *j)
-                temp = *i * (j - i);
-            else
-                temp = *j * (j - i);
+    while (i++)
+    {
+        while(j++)
+        {
+            if((*i) < (*j)){
+                temp = (*i) * (j - i);
+                printf("1,i = %d, j = %d.\n", *i, *j);
+            }
+            else{
+                temp = (*j) * (j - i);
+                printf("2,i = %d, j = %d.\n", *i, *j);
+            }
             if(temp > *storeValue)
                 *storeValue = temp;
+            j++;
         }
     }
 

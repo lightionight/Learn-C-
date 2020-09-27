@@ -1,5 +1,4 @@
 #include <stdio.h>
-//#define rect struct rect
 
 struct position
 {
@@ -24,6 +23,6 @@ int main(){
 }
 
 void InitRect(struct rect *pp, int x, int y, int pointN ){
-    pp->position1.x = x;
+    pp -> position1.x = x;
 }
 
