@@ -5,7 +5,7 @@
             "name": "C",
             "type": "cppdbg",
             "request": "launch",
-            "program":"${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+            "program":"${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe",
             "args":[],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",           

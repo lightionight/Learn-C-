@@ -5,14 +5,14 @@
             "type" :"shell",
             "label": "C",
             "command": "D:\\mingw64\\bin\\gcc.exe",
-            "args":["-std=c89",
-                    "-g", 
+            "args":[
+                    "-std=c89",
                     "${file}", 
                     "-o", 
-                    "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+                    "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                //"cwd": "${workspaceFolder}"
             },
             "problemMatcher":["$gcc"],
             "group": {
