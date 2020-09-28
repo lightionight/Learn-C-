@@ -26,3 +26,4 @@ void InitRect(struct rect *pp, int x, int y, int pointN ){
     pp -> position1.x = x;
 }
 
+/* test
