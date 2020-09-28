@@ -4,12 +4,12 @@
             "type" :"shell",
             "label": "C",
             "presentation": {
-                "echo": true,
-                "reveal": "silent",
+                "echo": false,
+                "reveal": "never",
                 "focus": false,
                 "panel": "shared",
                 "showReuseMessage": false,
-                "clear": false
+                "clear": true
             },
             "command": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
             "args":["-std=gnu11","${file}", "-o", "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
