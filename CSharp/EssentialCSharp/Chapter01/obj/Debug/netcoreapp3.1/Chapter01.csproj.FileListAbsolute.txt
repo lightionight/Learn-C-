@@ -1,0 +1,13 @@
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\bin\Debug\netcoreapp3.1\Chapter01.exe
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\bin\Debug\netcoreapp3.1\Chapter01.deps.json
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\bin\Debug\netcoreapp3.1\Chapter01.runtimeconfig.json
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\bin\Debug\netcoreapp3.1\Chapter01.runtimeconfig.dev.json
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\bin\Debug\netcoreapp3.1\Chapter01.dll
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\bin\Debug\netcoreapp3.1\Chapter01.pdb
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\obj\Debug\netcoreapp3.1\Chapter01.csprojAssemblyReference.cache
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\obj\Debug\netcoreapp3.1\Chapter01.AssemblyInfoInputs.cache
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\obj\Debug\netcoreapp3.1\Chapter01.AssemblyInfo.cs
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\obj\Debug\netcoreapp3.1\Chapter01.csproj.CoreCompileInputs.cache
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\obj\Debug\netcoreapp3.1\Chapter01.dll
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\obj\Debug\netcoreapp3.1\Chapter01.pdb
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\Chapter01\obj\Debug\netcoreapp3.1\Chapter01.genruntimeconfig.cache
