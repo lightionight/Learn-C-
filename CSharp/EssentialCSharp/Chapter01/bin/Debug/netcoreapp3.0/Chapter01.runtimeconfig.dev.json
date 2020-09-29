@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\WISDRI\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\WISDRI\\.nuget\\packages"
+    ]
+  }
+}

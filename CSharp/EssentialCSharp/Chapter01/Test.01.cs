@@ -8,7 +8,7 @@ namespace EssentialCSharp.Chapter1
 {
     class helloWorld
     {
-        static void Main(){
+        static void helloWorldPrint(){
             System.Console.WriteLine("Hello, This is first C# Program.");
         }
     }
