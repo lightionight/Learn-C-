@@ -1,20 +1,28 @@
 {
     "version" :"2.0.0",
-    "tasks":[{
+    "tasks":[
+        //C building Task
+        {
             "type" :"shell",
-            "label": "C",
-            "presentation": {
-                "echo": false,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": true
-            },
-            "command": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
-            "args":["-std=gnu11","${file}", "-o", "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
+            "label": "C Build",
+            "command": "gcc",
+            "args":["-std=c11","${file}", "-o", "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
             "options": {"cwd": "${workspaceFolder}"},
-            "problemMatcher":["$gcc"],
-            "group": {"kind": "build","isDefault": true}
-    }]
+            "problemMatcher": ["$gcc"],
+            "group": "none"
+        },
+
+        //C++ Building task
+        {
+            "type": "shell",
+            "label": "C++ Build",
+            "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++11", "-g", "${file}", "-o", "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
+            "options": {"cwd": "${workspaceFolder}"},
+            "problemMatcher": ["$gcc"],
+            "group": "none"
+        }
+        
+        //C# Building Task
+    ]
 }

@@ -4,6 +4,6 @@
 #include <stdio.h>//everything you need about system input and output
 
 int main(){
-    printf("Hello World!\c");
+    printf("Hello World!");
     return 0;
 }
