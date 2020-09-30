@@ -1,0 +1,4 @@
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.csprojAssemblyReference.cache
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.csproj.CoreCompileInputs.cache
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.AssemblyInfoInputs.cache
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.AssemblyInfo.cs
