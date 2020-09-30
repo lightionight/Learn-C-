@@ -1,2 +1,10 @@
 # Compier Files
 *.exe
+
+# Folders
+**/bin/*
+**/bin/Debug/netcoreapp3.1/*
+**/bin/Debug/netcoreapp3.0/*
+**/obj/*
+**/obj/Debug/netcoreapp3.1/*
+**/obj/Debug/netcoreapp3.0/*

@@ -2,3 +2,11 @@ D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.c
 D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.csproj.CoreCompileInputs.cache
 D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.AssemblyInfoInputs.cache
 D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.AssemblyInfo.cs
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\bin\Debug\netcoreapp3.0\test.exe
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\bin\Debug\netcoreapp3.0\test.deps.json
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\bin\Debug\netcoreapp3.0\test.runtimeconfig.json
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\bin\Debug\netcoreapp3.0\test.runtimeconfig.dev.json
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\bin\Debug\netcoreapp3.0\test.dll
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\bin\Debug\netcoreapp3.0\test.pdb
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.dll
+D:\Project\LearnC_CPP\CSharp\EssentialCSharp\test\obj\Debug\netcoreapp3.0\test.pdb
