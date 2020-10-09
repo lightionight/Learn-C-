@@ -1,40 +1,39 @@
 #include <stdio.h>
 /*#include "PointerGetInput.c"*/
 
-void maxArea(int arr[], int *result);
+void maxArea(int arr[], int *result, int arrlen);
+void maxAreaVer2(int arr[], int *result, int arrlen);
 
 
 int main(){
     int arr[9] = {1, 8, 6, 2, 5, 4, 8, 3, 7};
     int result = 0;
-    maxArea (arr, &result);
+    int arrlen = (int)(sizeof(arr)/sizeof(arr[0]));
+    printf("%d\n",arrlen);
+    maxArea(arr, &result, arrlen);
     printf("The max Area is %d.\n", result);
-    getchar();
     return 0;
 }
-
-void maxArea(int arr[], int *result){
-    int *i, *j, *storeValue;
+//single Pointer move
+void maxArea(int arr[], int *result, int arrlen){
+    int *i, *j;
     i = arr;
     j = i + 1;
-    storeValue = result;
     int temp;
-    while (i++)
+    while (*i )
     {
-        while(j++)
+        while(*j != NULL)
         {
-            if((*i) < (*j)){
-                temp = (*i) * (j - i);
-                printf("1,i = %d, j = %d.\n", *i, *j);
-            }
-            else{
-                temp = (*j) * (j - i);
-                printf("2,i = %d, j = %d.\n", *i, *j);
-            }
-            if(temp > *storeValue)
-                *storeValue = temp;
-            j++;
+            temp = ((*i) < (*j))? (*i) * (j - i): (*j) * (j - i);
+            if(temp > (*result))
+                (*result) = temp;
+            ++j;
         }
+        ++i;
     }
+
+}
+
+void maxAreaVer2(int arr[], int *result, int arrlen){
 
 }
