@@ -18,24 +18,69 @@
 #define MAX_LENGTH 50;
 #define RAND_MAX 3999
 
-enum romanNumber{
-    five = 5,
-    ten = 10,
-    five_ten = 50,
-    hundred = 100,
-    five_houdred = 500,
-    thousand = 1000
-};
 enum testNum{
     ten = 10,
     houdred = 100,
     thousand = 1000
 };
+
+//void intToRoman(char arr[], int Number);
+void intToSingle(int arr[], int number);
+
 int main(){
-    int num = rand();
+    int num = 3985;
+    int arr[4];
     //设定输出参数char array；
-    char s[MAX_LENGTH] = “look there”;
-    char *p = s;
+    intToSingle(arr, num);
+    //char *p = s;
+    return 0;
+
+}
 
 
+/*
+    intToSingle 是将一个多位数分割为单个的个位数的function
+    ref:https://blog.csdn.net/weixin_43557810/article/details/86761243
+*/
+void intToSingle(int arr[], int number){
+    //判断number是否符合判断范围;
+    if(number < 1 || number > 3999)
+        exit(0);
+    int *nPtr, temp, i, baseNum;
+    nPtr = arr;
+    baseNum = 1000;
+    for(i = 0; i < 4; baseNum /= 10)
+    {
+        *(nPtr + i) = number / baseNum % 10;
+        //printf("Number is %d\n", *(nPtr + i));
+        ++i;
+    }
+
+    
+}
+
+void ConditionRomanNum(int arr[], char result[]){
+    int i, j;
+    char *cPtr = result;
+    for(i = 0; i < 4; i++){
+        j = arr[i];
+        while(j != 0){
+            switch (i)
+            {
+            case 0 :
+                if(j = 4){
+                    j = 2;
+                    while(j-- > 0)
+                        *cPtr++ = ''
+                }
+                break;
+            case 1 :
+                if(j = 4);
+                break;
+            
+            default:
+                break;
+            }
+        }
+    }
 }
