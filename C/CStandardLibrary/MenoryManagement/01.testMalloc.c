@@ -40,7 +40,7 @@ int main(){
     int len1 = (int)(sizeof(arr1) / sizeof(arr1[0]));
     int len = (int)(sizeof(arr2) / sizeof(arr2[0]));
     len += len1;
-    int *Dptr = (int *)(malloc(len * (sizeof(int))));
+    int *Dptr = malloc(len * (sizeof(int)));
     for(i = 0; i < len; i++){
         if(i < len1)
             Dptr[i] = arr1[i];
