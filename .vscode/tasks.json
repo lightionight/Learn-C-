@@ -6,7 +6,12 @@
             "type" :"shell",
             "label": "C Build",
             "command": "gcc",
-            "args":["-std=c11","${file}", "-o", "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
+            "args":["-std=c11",
+                    "${file}", 
+                    "-I",
+                    "${workspaceFolder}/C/include",
+                    "-o", 
+                    "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
             "options": {"cwd": "${workspaceFolder}"},
             "problemMatcher": ["$gcc"],
             "group": "none"

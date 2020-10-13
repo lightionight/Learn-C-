@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "Selflib/self_string.h"
+#include "self_string.h"
 
 int main(){
     int arr1[4] = {4, 5, 6, 7};

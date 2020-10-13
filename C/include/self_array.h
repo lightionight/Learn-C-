@@ -3,15 +3,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
 struct arrayData{
     int *ptr;
     int length;
     int index;
 };
 
-void arrayDataInit( struct arrayData *arrayData){
-    arrayData->ptr = NULL;
-    arrayData->length = 0;
+void arrayDataInit( struct arrayData *arrayData, int *arr, int lens){
+    arrayData->ptr = arr;
+    arrayData->length = lens;
     arrayData->index = 0;
 }
 
@@ -30,19 +31,20 @@ void insertingArray(struct arrayData *arrayData, int Position, int value){
     }
     int *temp = (int *)(malloc(sizeof(int) * (arrayData->length + 1)));
     int i;
-    for(i = 0; i < (arrayData->length); i++){
-        temp[i] = arrayData->ptr[i];
-    }
-    arrayData->ptr = temp;
-    free(temp);
     arrayData->length++;
-    for(i = arrayData->length; i < Position; i--){
-        while (i == Position)
-        {
-            arrayData->ptr[i] = value;
+    for(i = 0; i < arrayData->length; i ++){
+        if(i < Position - 1){
+            temp[i] = arrayData->ptr[i];
         }
-        arrayData->ptr[i] = arrayData->ptr[i - 1];
+        else if(i == Position - 1){
+            temp[i] = value;
+        }
+        else{
+            temp[i] = arrayData->ptr[ i - 1];
+        }
     }
+    free(arrayData->ptr);
+    arrayData->ptr = temp;
 }
 
 void searchArray(struct arrayData *arrayData, int seachValue){
