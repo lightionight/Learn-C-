@@ -21,22 +21,22 @@ int getLine(char s[], int lim){
 }
 #define MAXLEN 1000
 /* readLine: 读取输入字符行数 */
-int readLine(char *linePtr[], int maxLines){
-    int len, nLines;
-    char *p, line[MAXLEN];
+// int readLine(char *linePtr[], int maxLines){
+//     int len, nLines;
+//     char *p, line[MAXLEN];
     
-    nLines = 0;
-    while((len = getLine(line, MAXLEN)) > 0){
-		if(nLines >= maxLines || p = malloc(len) == NULL)
-			return -1;
-		else{
-			line[len - 1] = '\0';
-            strcpy(p, line);
-            linePtr[nLines++] = p;
-		}
-	}
-    return nLines;
-}
+//     nLines = 0;
+//     while((len = getLine(line, MAXLEN)) > 0){
+// 		if(nLines >= maxLines || p = malloc(len) == NULL)
+// 			return -1;
+// 		else{
+// 			line[len - 1] = '\0';
+//             strcpy(p, line);
+//             linePtr[nLines++] = p;
+// 		}
+// 	}
+//     return nLines;
+// }
 
 //动态Int数组
 struct DymaticIntArray{
@@ -47,11 +47,11 @@ struct DymaticIntArray{
 
 void DymaticIntArrayInit(struct DymaticIntArray *array, int *arrayInt, int lens){
     array->arrayPtr = arrayInt;
-    array->arrIndex = 0;
     array->arrLen = lens;
+    array->arrIndex = 0;
 }
 
-struct DymaticIntArray * dymaticIntArrayAppend(const int *ptr[], int lens, struct DymaticIntArray *array)
+struct DymaticIntArray * DymaticIntArrayAppend(const int *ptr[], int lens, struct DymaticIntArray *array)
 {
     int i, *m_ptr = 0;
     m_ptr = (int *)(malloc(sizeof(int) * (lens + array->arrLen)));
@@ -68,6 +68,19 @@ struct DymaticIntArray * dymaticIntArrayAppend(const int *ptr[], int lens, struc
         array->arrayPtr[array->arrLen + i] = ptr[i];
     }
     return array;
+}
+// * returnArray must be initlaized by using DymaticIntArrayInit( )
+void DymaticArrayAppend(struct DymaticIntArray *retrunArray, struct DymaticIntArray *appendArray){
+    int i;
+    int *arrayTemp = (int *)(malloc(sizeof(int) * (retrunArray->arrLen + appendArray->arrLen)));
+    for(i = 0; i < retrunArray->arrLen; i++){
+        arrayTemp[i] = retrunArray->arrayPtr[i];
+    }
+    DymaticIntArrayInit(retrunArray,arrayTemp,(retrunArray->arrLen + appendArray->arrLen));
+    free(arrayTemp);
+    for(i = appendArray->arrLen; i > 0 ; i--){
+        retrunArray->arrayPtr[retrunArray->arrLen - i] = appendArray->arrayPtr[appendArray->arrIndex++];
+    }
 }
 
 
