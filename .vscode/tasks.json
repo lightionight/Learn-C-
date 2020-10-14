@@ -13,8 +13,7 @@
                     "-o", 
                     "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
             "options": {"cwd": "${workspaceFolder}"},
-            "problemMatcher": ["$gcc"],
-            "group": "none"
+            "problemMatcher": ["$gcc"]
         },
 
         //C++ Building task
@@ -24,8 +23,7 @@
             "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
             "args": ["-std=c++11", "-g", "${file}", "-o", "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
             "options": {"cwd": "${workspaceFolder}"},
-            "problemMatcher": ["$gcc"],
-            "group": "none"
+            "problemMatcher": ["$gcc"]
         }
         
         //C# Building Task

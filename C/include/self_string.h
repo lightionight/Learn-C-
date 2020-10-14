@@ -38,7 +38,7 @@
 //     return nLines;
 // }
 
-//动态Int数组Struct
+/* 动态Int数组Struct */
 struct DymaticIntArray{
     int *arrayPtr;
     int arrLen;
@@ -50,28 +50,28 @@ void DymaticIntArrayInit(struct DymaticIntArray *array, int *arrPtr, int lens){
     array->arrLen = lens;
 }
 
-// * returnArray must be initlaized by using DymaticIntArrayInit( )
+/* returnArray must be initlaized by using DymaticIntArrayInit( ) */
 void DymaticArrayAppend(struct DymaticIntArray *returnArray, struct DymaticIntArray *appendArray){
     int i,j;
     
-    //alloc new array length memory block;
+    /* alloc new array length memory block; */
     int *arrayTemp = (int *)(malloc(sizeof(int) * ((returnArray->arrLen) + (appendArray->arrLen))));
     for(i = 0; i < returnArray->arrLen; i++){
         arrayTemp[i] = returnArray->arrayPtr[i];
         
     }
     
-    //free(returnArray->arrayPtr);
+    /* free(returnArray->arrayPtr); */
     i = returnArray->arrLen;
     j = 0;
     DymaticIntArrayInit(returnArray, arrayTemp, (returnArray->arrLen + appendArray->arrLen));
     for(; i < returnArray->arrLen ; i++){
-        //printf("%d\n", i);
+        // printf("%d\n", i)
         returnArray->arrayPtr[i] = appendArray->arrayPtr[j++];
     }
 }
 
-//动态Char数组
+/* 动态Char数组 */
 struct DymaticCharArray{
     char *arrayPtr;
     int  arrLen;
@@ -80,4 +80,4 @@ struct DymaticCharArray{
 
 
 
-#endif /*selfSting*/
+#endif /* _SELF_STRING_ */

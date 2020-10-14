@@ -16,7 +16,7 @@ void arrayDataInit( struct arrayData *arrayData, int *arr, int lens){
     arrayData->index = 0;
 }
 
-void traversingArray(struct arrayData *arrayData){
+void traversingArrayData(struct arrayData *arrayData){
     int i;
     for(i = 0; i < arrayData->length; i++){
         printf("%d, ", arrayData->ptr[i]);
@@ -24,7 +24,7 @@ void traversingArray(struct arrayData *arrayData){
     printf("\n");
 }
 
-void insertingArray(struct arrayData *arrayData, int Position, int value){
+void insertingArrayData(struct arrayData *arrayData, int Position, int value){
     if(Position > arrayData->length){
         printf("The Position lager than array length.");
         exit(0);
@@ -32,7 +32,7 @@ void insertingArray(struct arrayData *arrayData, int Position, int value){
     int *temp = (int *)(malloc(sizeof(int) * (arrayData->length + 1)));
     int i;
     arrayData->length++;
-    for(i = 0; i < arrayData->length; i ++){
+    for(i = 0; i < arrayData->length; i++){
         if(i < Position - 1){
             temp[i] = arrayData->ptr[i];
         }
@@ -43,13 +43,13 @@ void insertingArray(struct arrayData *arrayData, int Position, int value){
             temp[i] = arrayData->ptr[ i - 1];
         }
     }
-    free(arrayData->ptr);
+    //free(arrayData->ptr);
     arrayData->ptr = temp;
 }
 
-void searchArray(struct arrayData *arrayData, int seachValue){
+void searchArrayData(struct arrayData *arrayData, int seachValue){
     
 }
 
 
-#endif //_SELF_ARRAY_H_
+#endif /* _SELF_ARRAY_H_ */
