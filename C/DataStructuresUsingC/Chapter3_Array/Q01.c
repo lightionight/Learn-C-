@@ -5,23 +5,50 @@
     * Ref: https://blog.csdn.net/xfxf996/article/details/107457152 -> 传递2D array
 */
 #include <stdio.h>
+#include <stdlib.h>
 
-int averageSubject(int (*ptr)[5], int subject);
-float averageStudents(int (*ptr)[5], int studentsIndex);
+int averageSubject(int (*ptr)[5], int studentSum, int subjectIndex);
+int averageStudent(int (*ptr)[5], int studentIndex, int subjectSum);
+void unCertificationStudents(int (*ptr)[5], int subjectSum, int studentSum, int underLine, int *returnPtr);
+void printAll(int (*ptr)[5], int subjectSum, int studentSum);
 
 int main(){
-    int students[3][5] = {
-        1, 4, 5, 3, 2,
-        2, 4, 4, 4, 3,
-        5, 5, 5, 5, 5
+    int students[5][5] = {
+        10, 40, 50, 30, 20,
+        20, 40, 40, 40, 30,
+        50, 50, 50, 50, 50,
+        70, 60, 80, 60, 50,
+        90, 40, 70, 60, 80
     };
     int (*ptr)[5];
     ptr = students;
-    int subject;
-    subject = 0;
-    //int result = averageSubject(ptr,subject);
-    float result = averageStudents(ptr, 2);
-    printf("result is %f.\n",result);
+    int studentIndex = 0;
+    int subjectIndex = 5;
+    int studentSum = 5;
+    int subjectSum = 5;
+    int aveSubject = averageSubject(ptr, studentSum, subjectIndex);
+    int aveStudent = averageStudent(ptr, studentIndex, subjectSum);
+
+    int resultPtr[5] = {0};
+    unCertificationStudents(ptr, subjectSum, studentSum, 50, resultPtr);
+
+    //Print Answer
+    printf("All students %dth subject ave is %d.\n", subjectIndex, aveSubject);
+    printf("The   index  %dth student ave is %d.\n",studentIndex, aveStudent);
+    for(int i = 0; i < studentSum; i++)
+    {
+        if(i == studentSum - 1)
+        {
+            printf("%d.\n",*(resultPtr + i));
+        }
+        else
+        {
+            printf("%d,",*(resultPtr + i));
+        }
+
+    }
+    printAll(ptr,subjectSum,studentSum);
+    return 0;
 }
 
 /*
@@ -29,40 +56,72 @@ int main(){
     array : 成绩数组.
     subject: 指定学科;
     aveMarks: 返回平均值;
-*/
-int averageSubject(int (*ptr)[5], int subject)
+    */
+int averageSubject(int (*ptr)[5], int studentSum, int subjectIndex)
 {
-    int i,aveMarks = 0;
-    for(i = 0; i < 3; i++)
+    int averageValue = 0;
+    for(int i = 0; i < studentSum; i++)
     {
-        aveMarks += *(*(ptr + i) + subject);
-        printf("%d\n", aveMarks);
+        averageValue += *(*(ptr + i) + subjectIndex);
     }
-    return (aveMarks / 3);
+    averageValue /= studentSum;
+    return averageValue;
 }
 
 /*
     计算单个学生的所有学科的总和的平均分
     ptr: students marks table pointer
     studentsIndex:
-*/
-float averageStudents(int (*ptr)[5], int studentsIndex)
+    */
+int averageStudent(int (*ptr)[5], int studentIndex, int subjectSum)
 {
-    int i,averageAllMark = 0;
-    for(i = 0; i < 5; i ++)
+    int averageValue = 0;
+    for(int i = 0; i < subjectSum; i++)
     {
-        averageAllMark += (*(*(ptr + studentsIndex) + i));
+        averageValue += *(*(ptr + studentIndex) + i);
     }
-    return averageAllMark / 5;
+    averageValue /= subjectSum;
+    return averageValue;
 }
 
 /*
     Find students  who average marks under 50.
     */
-
+void unCertificationStudents(int (*ptr)[5], int subjectSum, int studentSum, int underLine, int *returnPtr)
+{
+    //int *array = (int *)(malloc(sizeof(int) * studentSum));
+    int averageValue;
+    for(int i = 0; i < studentSum; i++)
+    {
+        averageValue = 0;
+        averageValue = averageStudent(ptr, i, subjectSum);
+        if(averageValue < underLine)
+        {
+            returnPtr[i] = 1;
+        }
+    }
+}
 
 
 
 /*
     Display every element of every students every subject marks.
     */
+void printAll(int (*ptr)[5], int subjectSum, int studentSum)
+{
+    for(int i = 0; i < studentSum; i++)
+    {
+        for(int j = 0; j < subjectSum; j++)
+        {
+            if(j == subjectSum - 1)
+            {
+                printf("%d.\n", *(*(ptr + i) + j));
+            }
+            else
+            {
+                printf("%d,", *(*(ptr + i) + j));
+            }
+            
+        }
+    }
+}

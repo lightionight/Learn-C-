@@ -27,7 +27,7 @@ void traversingArrayData(struct arrayData *arrayData){
 void insertingArrayData(struct arrayData *arrayData, int Position, int value){
     if(Position > arrayData->length){
         printf("The Position lager than array length.");
-        exit(0);
+        exit(1);
     }
     int *temp = (int *)(malloc(sizeof(int) * (arrayData->length + 1)));
     int i;
