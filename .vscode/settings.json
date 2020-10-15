@@ -1,7 +1,3 @@
 {
-    "editor.fontFamily": "IBM Plex Mono, 'Microsoft Yahei', monospace",
-    "editor.autoIndent": "advanced",
-    "files.associations": {
-        "iostream": "cpp"
-    }
+    "editor.fontFamily": "IBM Plex Mono, 'Microsoft Yahei', monospace"
 }
