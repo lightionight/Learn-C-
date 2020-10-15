@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifdef _RANDOM_ARRAY
+#include <time.h>
+#endif /* _RANDOM_ARRAY */
+
 struct arrayData{
     int *ptr;
     int length;
@@ -50,6 +54,14 @@ void insertingArrayData(struct arrayData *arrayData, int Position, int value){
 void searchArrayData(struct arrayData *arrayData, int seachValue){
     
 }
+#ifdef _RANDOM_ARRAY
 
+void randomArrayData(struct arrayData *arrayData)
+{
 
-#endif /* _SELF_ARRAY_H_ */
+}
+
+#endif /* _RANDOM_ARRAY */
+
+#endif 
+/* _SELF_ARRAY_H_ */
