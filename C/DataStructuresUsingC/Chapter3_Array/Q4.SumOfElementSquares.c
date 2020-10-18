@@ -10,7 +10,7 @@
 
 #define _ARRAY_LENGTH 50
 
-int main()
+int main( )
 {
     struct arrayData array; 
     struct arrayData *arrayPtr;

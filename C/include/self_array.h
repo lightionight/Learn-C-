@@ -12,17 +12,18 @@ struct arrayData{
     int *ptr;
     int length;
     int index;
-};
-struct array2dData{
-    int (*ptr)[col];
-    int col;
+    int _is2DArray;
     int row;
-}
+    int col;
+};
 
 void arrayDataInit( struct arrayData *arrayData, int *arr, int lens){
     arrayData->ptr = arr;
     arrayData->length = lens;
     arrayData->index = 0;
+    arrayData->_is2DArray = 0;
+    arrayData->row = 0;
+    arrayData->col = 0;
 }
 
 /*  arrayData type after using must free() 
@@ -34,7 +35,17 @@ void arrayDataInitWithoutPtr(struct arrayData *arrayData, int lens)
     arrayData->ptr = array;
     arrayData->length = lens;
     arrayData->index = 0;
+    arrayData->_is2DArray = 0;
+    arrayData->row = 0;
+    arrayData->col = 0;
 }
+
+void array2DataInit(struct  arrayData *arrayData, int row, int col)
+{
+    /* row order 2d array*/
+    arrayData->ptr = (int *)(malloc(sizeof(int) * (row * col) ));
+}
+
 
 void traversingArrayData(struct arrayData *arrayData){
     int i;
@@ -78,11 +89,11 @@ void searchArrayData(struct arrayData *arrayData, int seachValue)
 void randomArrayData(struct arrayData *arrayData)
 {
     struct timespec ts;
-    if(clock_gettime(CLOCK_REALTIME, &ts) == 0)
+    if(timespec_get(&ts, TIME_UTC))
     {
         printf("Get Time error.\n");
     }
-    srand(time(ts.tv_nsec ^ ts.tv_nsec));
+    srand(time(ts.tv_nsec ^ (int)ts.tv_nsec));
     for(int i = 0; i < arrayData->length; i++)
     {
         *(arrayData->ptr + i) = (rand() % 101);
