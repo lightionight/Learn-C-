@@ -12,7 +12,26 @@
 
 int main()
 {
-    struct arrayData *array;
-    
-
+    struct arrayData array; 
+    struct arrayData *arrayPtr;
+    arrayPtr = &array;
+    arrayDataInitWithoutPtr(arrayPtr, _ARRAY_LENGTH);
+    randomArrayData(arrayPtr);
+    for(int i = 0; i < arrayPtr->length; i++)
+    {
+        if(i == arrayPtr->length - 1)
+        {
+            printf("%d.\n", *(arrayPtr + i));
+        }
+        else if( i % 10 == 0 && i != 0)
+        {
+            printf("%d,\n", *(arrayPtr + i));
+        }
+        else
+        {
+            printf("%d,", *(arrayPtr + i));
+        }
+        
+    }
+    return 0;
 }

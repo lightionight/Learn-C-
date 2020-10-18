@@ -13,9 +13,25 @@ struct arrayData{
     int length;
     int index;
 };
+struct array2dData{
+    int (*ptr)[col];
+    int col;
+    int row;
+}
 
 void arrayDataInit( struct arrayData *arrayData, int *arr, int lens){
     arrayData->ptr = arr;
+    arrayData->length = lens;
+    arrayData->index = 0;
+}
+
+/*  arrayData type after using must free() 
+    lens : array length 
+*/
+void arrayDataInitWithoutPtr(struct arrayData *arrayData, int lens)
+{
+    int *array = (int *)(malloc(sizeof(int) * lens));
+    arrayData->ptr = array;
     arrayData->length = lens;
     arrayData->index = 0;
 }
@@ -51,17 +67,30 @@ void insertingArrayData(struct arrayData *arrayData, int Position, int value){
     arrayData->ptr = temp;
 }
 
-void searchArrayData(struct arrayData *arrayData, int seachValue){
+void searchArrayData(struct arrayData *arrayData, int seachValue)
+{
     
 }
-#ifdef _RANDOM_ARRAY
 
+
+#ifdef _RANDOM_ARRAY
+#define TIME_UTC
 void randomArrayData(struct arrayData *arrayData)
 {
-
+    struct timespec ts;
+    if(clock_gettime(CLOCK_REALTIME, &ts) == 0)
+    {
+        printf("Get Time error.\n");
+    }
+    srand(time(ts.tv_nsec ^ ts.tv_nsec));
+    for(int i = 0; i < arrayData->length; i++)
+    {
+        *(arrayData->ptr + i) = (rand() % 101);
+    }
 }
 
 #endif /* _RANDOM_ARRAY */
 
-#endif 
-/* _SELF_ARRAY_H_ */
+void array_2dArraySum()
+
+#endif  /* _SELF_ARRAY_H_ */
