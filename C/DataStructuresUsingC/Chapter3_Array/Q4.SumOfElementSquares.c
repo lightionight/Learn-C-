@@ -19,11 +19,11 @@ int main( )
     randomArrayData(arrayPtr);
     for(int i = 0; i < arrayPtr->length; i++)
     {
-        if(i == arrayPtr->length - 1)
+        if(i + 1 == arrayPtr->length)
         {
             printf("%d.\n", *(arrayPtr + i));
         }
-        else if( i % 10 == 0 && i != 0)
+        else if( (i + 1) % 10 == 0)
         {
             printf("%d,\n", *(arrayPtr + i));
         }

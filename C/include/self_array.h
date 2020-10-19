@@ -4,9 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifdef _RANDOM_ARRAY
+
 #include <time.h>
-#endif /* _RANDOM_ARRAY */
 
 struct arrayData{
     int *ptr;
@@ -84,24 +83,33 @@ void searchArrayData(struct arrayData *arrayData, int seachValue)
 }
 
 
-#ifdef _RANDOM_ARRAY
-#define TIME_UTC
+/*
+    struct timespec 包含nanosecond
+    clock_gettime() define in time.h
+*/
 void randomArrayData(struct arrayData *arrayData)
 {
     struct timespec ts;
-    if(timespec_get(&ts, TIME_UTC))
+    if(clock_gettime(CLOCK_REALTIME, &ts))
     {
         printf("Get Time error.\n");
     }
-    srand(time(ts.tv_nsec ^ (int)ts.tv_nsec));
+    
     for(int i = 0; i < arrayData->length; i++)
     {
+        srand(time(NULL));
         *(arrayData->ptr + i) = (rand() % 101);
+        if(*(arrayData->ptr + i) ==  *(arrayData->ptr + i - 1))
+        {
+            --i;
+        }
     }
 }
 
-#endif /* _RANDOM_ARRAY */
 
 void array_2dArraySum()
+{
+
+}
 
 #endif  /* _SELF_ARRAY_H_ */
