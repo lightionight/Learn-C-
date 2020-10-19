@@ -23,26 +23,37 @@
 #include <string.h>
 
 #define MAXLENGTH 8
-/* 转换结构体 */
-struct telNumber{
-    int charIndex;
+
+struct telNum
+{
     int asciiIndexStart;
     int length;
 };
-/* 输出结构体 */
-struct output{
-    char *ptr; /* 输出字符串合并的字符串组指针*/
-    int length; /* 为转换Char结构体的长度 */
+
+struct outArray
+{
+    char *charArray;
+    int length;
 };
 
-int main(){
+typedef struct telNum telNum;
+typedef struct outArray outArray;
+
+int main()
+{
+    telNum *ptr;
+    int telNumLength = 0;
     char input[MAXLENGTH];
     printf("Input translate telNumber:\n");
     scanf("%8s", &input);
-    struct telNumber *ptr;
-    int telNumberArraylength;
-    translateTelNumberToChar(ptr, &telNumberArraylength, input, MAXLENGTH);
-    return 0;
+
+    translateTelNumberToChar(ptr, &telNumLength, input, MAXLENGTH);
+    int OutArrayLength = getAllpossible(ptr, telNumLength);
+    outArray *out = (outArray *)(malloc(sizeof(outArray) * OutArrayLength));
+    outArrayInit(out, OutArrayLength, telNumLength);
+    
+
+    
 }
 
 /* 
@@ -52,7 +63,7 @@ length :       转换Char结构体长度；
 input：        输入的字符串组；    
 inputLength ： 输入的字符串组长度；
 */
-void translateTelNumberToChar(struct telNumber *ptr, int *length, char *input, int inputLength)
+void translateTelNumberToChar(telNum *ptr, int *telnumLength, char *input, int inputLength)
 {
     int _checkLength;
     for(int i = 0; i < inputLength; i++)
@@ -62,7 +73,7 @@ void translateTelNumberToChar(struct telNumber *ptr, int *length, char *input, i
             _checkLength++;
         }
     }
-    struct telNumber *returnPtr = (struct telNumber *)(malloc(sizeof(struct telNumber) * _checkLength));
+    telNum *returnPtr = (telNum *)(malloc(sizeof(telNum) * _checkLength));
     for(int i = 0; i < _checkLength; i++)
     {
         switch (input[i])
@@ -105,37 +116,11 @@ void translateTelNumberToChar(struct telNumber *ptr, int *length, char *input, i
 
     }
     ptr = returnPtr;
-    length = _checkLength;
+    telnumLength = _checkLength;
 }
-
-void combineChar(struct telNumber *ptr, int telNumberArraylength, struct output *array, int *arrayLength)
-{
-    int allPossible = getAllpossible(ptr, telNumberArraylength);
-    struct output **outputArray = (struct output *)(malloc(sizeof(struct output **) * allPossible));
-    
-    
-
-    
-}
-
-struct output * cycleCombine(struct telNumber *ptr, int length, int telNumberArrayLength)
-{
-    struct output *temp = (struct output *)(malloc(sizeof(char) * telNumberArrayLength));
-
-}
-
-char *finnal smallCycleCombine(struct telNubmer *ptr, int length, char *outputCharArray, int *outputCharArrayLength)
-{
-    for(int i = 0; i < length; i++)
-    {
-        outputCharArray[i] = 
-    }
-}
-
-
 
 /* 计算所有字符组合可能的长度 返回 字符组长度 */
-int getAllpossible(struct telNumber *array, int length)
+int getAllpossible(telNum *array, int length)
 {
     int result = 1;
     for(int i = 0; i < length; i++)
@@ -143,4 +128,13 @@ int getAllpossible(struct telNumber *array, int length)
         result *= array->length;
     }
     return result;
+}
+
+void outArrayInit(outArray *array, int arrayLength, int stringlength)
+{
+    for(int i = 0; i < arrayLength; i++)
+    {
+        array[i].charArray = NULL;
+        array[i].length = stringlength;
+    }
 }

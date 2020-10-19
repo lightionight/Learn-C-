@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "IBM Plex Mono, 'Microsoft Yahei UI', monospace"
+    "editor.fontFamily": "IBM Plex Mono, 'Microsoft Yahei' , monospace",
+    "editor.suggest.maxVisibleSuggestions": 15
 }
