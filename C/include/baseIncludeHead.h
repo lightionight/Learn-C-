@@ -2,6 +2,7 @@
 #define _BASE_INCLUDE_HEAD_H_
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #ifdef _SELF_INCLUDE_STRING_HEAD
 #include <ctype.h>

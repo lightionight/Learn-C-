@@ -1,6 +1,6 @@
  /***************************************************
   *                                                 *
-  *    USing for loop Print F and C from high to low*
+  * USing for loop Print F and C from high to low   *
   *                                                 *
   *                                                 *
   * ************************************************/
