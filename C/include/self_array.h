@@ -7,16 +7,16 @@
 
 #include <time.h>
 
-struct arrayData{
+typedef struct arraydata{
     int *ptr;
     int length;
     int index;
     int _is2DArray;
     int row;
     int col;
-};
+}ArrayData;
 
-void arrayDataInit( struct arrayData *arrayData, int *arr, int lens){
+void arrayDataInit( ArrayData *arrayData, int *arr, int lens){
     arrayData->ptr = arr;
     arrayData->length = lens;
     arrayData->index = 0;
@@ -28,7 +28,7 @@ void arrayDataInit( struct arrayData *arrayData, int *arr, int lens){
 /*  arrayData type after using must free() 
     lens : array length 
 */
-void arrayDataInitWithoutPtr(struct arrayData *arrayData, int lens)
+void arrayDataInitWithoutPtr(ArrayData *arrayData, int lens)
 {
     int *array = (int *)(malloc(sizeof(int) * lens));
     arrayData->ptr = array;
@@ -39,14 +39,14 @@ void arrayDataInitWithoutPtr(struct arrayData *arrayData, int lens)
     arrayData->col = 0;
 }
 
-void array2DataInit(struct  arrayData *arrayData, int row, int col)
+void array2DataInit(ArrayData *arrayData, int row, int col)
 {
     /* row order 2d array*/
     arrayData->ptr = (int *)(malloc(sizeof(int) * (row * col) ));
 }
 
 
-void traversingArrayData(struct arrayData *arrayData){
+void traversingArrayData(ArrayData *arrayData){
     int i;
     for(i = 0; i < arrayData->length; i++){
         printf("%d, ", arrayData->ptr[i]);
@@ -54,7 +54,7 @@ void traversingArrayData(struct arrayData *arrayData){
     printf("\n");
 }
 
-void insertingArrayData(struct arrayData *arrayData, int Position, int value){
+void insertingArrayData(ArrayData *arrayData, int Position, int value){
     if(Position > arrayData->length){
         printf("The Position lager than array length.");
         exit(1);
@@ -77,7 +77,7 @@ void insertingArrayData(struct arrayData *arrayData, int Position, int value){
     arrayData->ptr = temp;
 }
 
-void searchArrayData(struct arrayData *arrayData, int seachValue)
+void searchArrayData(ArrayData *arrayData, int seachValue)
 {
     
 }
@@ -87,7 +87,7 @@ void searchArrayData(struct arrayData *arrayData, int seachValue)
     struct timespec 包含nanosecond
     clock_gettime() define in time.h
 */
-void randomArrayData(struct arrayData *arrayData)
+void randomArrayData(ArrayData *arrayData)
 {
     struct timespec ts;
     if(clock_gettime(CLOCK_REALTIME, &ts))
