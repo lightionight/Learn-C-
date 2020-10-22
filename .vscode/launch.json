@@ -21,7 +21,7 @@
                 "ignoreFailures": false,
                 }
             ],
-            "preLaunchTask":"C Build"
+            "preLaunchTask":"C++ Build"
         },
         
     ],
