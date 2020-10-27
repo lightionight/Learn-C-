@@ -27,7 +27,7 @@ Complex(complex, complex, convertComplex(double));
 ```
 After this, we using single line code to detial with three situcation. 
 ```C++
-Complex(complex, complex,complex)  
+Complex(complex, complex, complex)  
 Complex(complex, complex, double)
 ``` 
 Now we see, thing get simplely;  
@@ -35,21 +35,20 @@ Now we see, thing get simplely;
 
 let'see something like this:  
 ```C++
-Class Test{
+class Test{
     Private:
         int real, image;
     Public:
         int real() const{
             return this.real;
         }
-        int imager() const{
+        int image() const{
             return this.image;
         }
-        inline bool operator==(complex a, complex b)
+        inline bool operator==(Test a, Test b)
         {
             return a.real() == b.real() && a.image() == b.image();
         }
 }
 ```  
-Separate function to basic peice, And using them with Combine, it's really make things simplely and reduce
-code multipulate repeat.
+Separate function to basic peice, and using them with Combine, it's really make things simplely and reduce code multipulate repeat.
