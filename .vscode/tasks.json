@@ -26,6 +26,8 @@
                      "${file}", 
                      "-I",
                      "${workspaceFolder}/Cpp/include",
+                     "-I",
+                     "${workspaceFolder}/Cpp/LearnCppCom/ProgramWithMultiFiles",
                      "-o", 
                      "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
             "options": {"cwd": "${workspaceFolder}"},

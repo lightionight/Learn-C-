@@ -22,7 +22,8 @@ void letsPlay(){
     while(loopTime <= 7){
         std::cout << "Guess #" << loopTime << ":" << getInput();
         int x = getInput();
-        if(x > y){
+        if(x > y)
+        {
                 std::cout << "Your guess is too high";
                 ++loopTime;
             }

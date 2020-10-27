@@ -2,5 +2,5 @@
     "editor.fontFamily": "IBM Plex Mono, 'Microsoft Yahei' , monospace",
     "editor.suggest.maxVisibleSuggestions": 15,
     "omnisharp.path": "1.37.3",
-    "editor.fontSize": 16
+    "editor.fontSize": 14
 }
