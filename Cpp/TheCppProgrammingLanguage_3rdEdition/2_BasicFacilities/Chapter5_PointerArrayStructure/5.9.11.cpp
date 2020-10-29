@@ -3,7 +3,7 @@
  * Read a sequence of words from input.
  * Use Quit as word that terminates the input.
  * Print the words in the order they were enterd.
- * Don't Print word Twice.  //This not approch
+ * Don't Print word Twice.  //This not approch,需要一个动态的string Array来记录已经输入过的值
  * Modifity the program sort the words before Print them.
 */
 /******************************************************

@@ -10,3 +10,9 @@
  * TIME：2020.10.28
  * ***************************************************/
 
+#include "cppBaseInclude.h"
+#include "5.9.12_class.cpp"
+
+int main(){
+    test::FindMatch first = new test::FindMatch()
+}
