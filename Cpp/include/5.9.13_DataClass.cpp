@@ -1,6 +1,8 @@
 #ifndef _DATE_CLASS_CPP_
 #define _DATE_CLASS_CPP_
 
+#include <iostream>
+
 namespace test{
     class Date{
             int day, month, year;
@@ -22,6 +24,13 @@ namespace test{
                 assignMonth(m);
                 assignYear(y);
             }
+            void PrintIt()
+            {
+                std::cout << "This year is : " << year << std::endl;
+                std::cout << "This month is : " << month << std::endl;
+                std::cout << "This days is : " << day << std::endl;
+            }
+
 
     };
 }

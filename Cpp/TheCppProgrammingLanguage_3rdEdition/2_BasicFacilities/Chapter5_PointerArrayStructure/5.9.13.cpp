@@ -10,8 +10,11 @@
  * AUTHOR: FENG
  * TIME：2020.10.28
  * ***************************************************/
+
 #include "5.9.13_DataClass.cpp"
 
 int main(){
-    test::Date date = new test::Date();
+    test::Date* date = new test::Date();
+    test::Date* date1 = new test::Date(1, 2, 2020);
+    date1->PrintIt();
 }

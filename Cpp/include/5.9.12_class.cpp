@@ -12,7 +12,7 @@
 
 #ifndef _5_9_12_CLASS_CPP_
 #define _5_9_12_CLASS_CPP_
-#include <string>
+#include "cppBaseInclude.h"
 namespace test{
     class FindMatch{
         private:
@@ -21,18 +21,18 @@ namespace test{
             int m_count;
             int countPattern(std::string& inputString, std::string& matchPattern)
             {
-                if(inputString.length < matchPattern.length)
+                if(inputString.length() < matchPattern.length())
                 {
-                    std::cout << "This Pattern too big for String."
+                    std::cout << "This Pattern too big for String.";
                     return -1;
                 }
                 int result = 0;
-                for(int i = 0; (i + matchPattern.length) < inputString.length; i++)
+                for(int i = 0; (i + matchPattern.length()) < inputString.length(); i++)
                 {
                     int sum, count;
                     sum = 0;
-                    count = matchPattern.length;
-                    for(int j = 0; j < matchPattern.length; j++)
+                    count = matchPattern.length();
+                    for(int j = 0; j < matchPattern.length(); j++)
                     {
                         if(inputString[j] == matchPattern[j])
                         {
@@ -47,8 +47,8 @@ namespace test{
                 return result;
             }
         public:
-            FindMatch* FindMatch():m_InputString(NULL), m_matchPattern(NULL),m_count(0){}
-            void FindMatch(std::string& input, std::string& pattern)
+            FindMatch(): m_InputString(NULL), m_matchPattern(NULL),m_count(0){}
+            FindMatch(std::string& input, std::string& pattern)
             {
                 m_InputString = input;
                 m_matchPattern = pattern;
@@ -58,7 +58,7 @@ namespace test{
             {
                 std::cout << "The string is " << m_InputString << std::endl
                           << "Match Pattern is " << m_matchPattern << std::endl
-                          << "In string  match count is " << m_count << std::enl;
+                          << "In string  match count is " << m_count << std::endl;
             }
             //~FindMatch(){delete this}
     };
