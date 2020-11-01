@@ -21,6 +21,28 @@
                 "ignoreFailures": false,
                 }
             ],
+            "preLaunchTask":"C Build"
+        },
+        {
+            "logging": {"moduleLoad": false, "engineLogging": false},
+            "name": "C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program":"${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe",
+            "args":[],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",           
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": false,
+                }
+            ],
             "preLaunchTask":"C++ Build"
         },
         
