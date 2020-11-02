@@ -8,8 +8,6 @@
 // DATE: 2020.11.02
 #include <iostream>
 #include <vector>
-
-
 class Alpha{
     private:
         std::vector<char> m_string;
@@ -19,49 +17,62 @@ class Alpha{
         //int getEIndex(){ return m_endIndex;}
     public:
         Alpha();
-        Alpha(int startIndex, int endIndex);
-        Alpha(int endIndex);
-        Alpha(int startIndex);
+        Alpha(int& startIndex, int& endIndex);
         Alpha(std::vector<char>& string);
         void insertAlpha();
-        void OrderIt();
         void reverseIt();
         void printIt();
 
 };
+Alpha::Alpha(){
+    m_startIndex = 97;
+    m_endIndex = 122;
+    insertAlpha();
+}
 
 void Alpha::insertAlpha(){
-    m_string.resize(m_endIndex - m_startIndex);
+    m_string.(m_endIndex - m_startIndex); // <------ Problem On there
     for(int i = 0; i < (m_endIndex - m_startIndex); i++)
     {
         Alpha::m_string.push_back((char)(i + m_startIndex));
     }
 }
 
-Alpha::Alpha(int startIndex, int endIndex){
+
+Alpha::Alpha(int& startIndex, int& endIndex){
     m_startIndex = startIndex;
     m_endIndex = endIndex;
     insertAlpha();
 
-}
-
-Alpha::Alpha(int endIndex){
-    m_endIndex = endIndex;
-    m_startIndex = 97;
-    insertAlpha();
-}
-
-Alpha::Alpha(int startIndex){
-    m_startIndex = startIndex;
-    m_endIndex = 122;
-    insertAlpha();
 }
 
 void Alpha::reverseIt(){
-    
+    char temp;
+    for(int i = 0; i < m_string.size() / 2; i++)
+    {
+        temp = m_string.at(i);
+        m_string.at(i) = m_string.at(m_string.size() - i - 1);
+        m_string.at(m_string.size() - i - 1) = temp;
+    }
 
 }
 
-int main(){
+void Alpha::printIt(){
+    for(int i = 0; i < m_string.size(); i++)
+    {
+        if(i != m_string.size() - 1){
+            std::cout << m_string.data()[i] << ',';
+        }
+        else{
+            std::cout << m_string.data()[i] << '.' << std::endl;
+        }
+            
+    }
+}
 
+int main(){
+    Alpha a;
+    a.reverseIt();
+    a.printIt();
+    return 0;
 }
