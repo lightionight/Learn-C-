@@ -1,6 +1,17 @@
 {
     "editor.fontFamily": "IBM Plex Mono, 'Microsoft Yahei' , monospace",
     "editor.suggest.maxVisibleSuggestions": 15,
-    "editor.fontSize": 14
+    "editor.fontSize": 14,
+    "files.associations": {
+        "new": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "functional": "cpp"
+    }
     
 }

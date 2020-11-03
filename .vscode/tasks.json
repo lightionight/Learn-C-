@@ -32,8 +32,11 @@
                      "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"],
             "options": {"cwd": "${workspaceFolder}"},
             "problemMatcher": ["$gcc"]
-        }
+        },
         
         //C# Building Task
+        {
+            
+        }
     ]
 }

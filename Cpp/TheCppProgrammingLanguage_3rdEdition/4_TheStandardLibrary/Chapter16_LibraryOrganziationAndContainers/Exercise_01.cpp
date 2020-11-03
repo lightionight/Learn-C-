@@ -8,6 +8,8 @@
 // DATE: 2020.11.02
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
 class Alpha{
     private:
         std::vector<char> m_string;
@@ -26,15 +28,15 @@ class Alpha{
 };
 Alpha::Alpha(){
     m_startIndex = 97;
-    m_endIndex = 122;
+    m_endIndex = 123;
     insertAlpha();
 }
 
 void Alpha::insertAlpha(){
-    m_string.(m_endIndex - m_startIndex); // <------ Problem On there
+    m_string.resize(m_endIndex - m_startIndex); // <------ Problem On there
     for(int i = 0; i < (m_endIndex - m_startIndex); i++)
     {
-        Alpha::m_string.push_back((char)(i + m_startIndex));
+        Alpha::m_string.at(i) = (char)(i + m_startIndex);
     }
 }
 
@@ -72,7 +74,7 @@ void Alpha::printIt(){
 
 int main(){
     Alpha a;
-    a.reverseIt();
+    //a.reverseIt();
     a.printIt();
     return 0;
 }
