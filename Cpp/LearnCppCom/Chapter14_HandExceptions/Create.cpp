@@ -16,7 +16,7 @@ int main(){
         " * DATE   : 2020.11.04.",
         "************************************************/"
     };
-    std::string pathName = "D:\\Project\\Learn_C_Family_Language\\Cpp\\LearnCppCom\\Chapter13_Templates\\";
+    std::string pathName = "D:\\Project\\Learn_C_Family_Language\\Cpp\\LearnCppCom\\Chapter_P\\";
     std::string filesName;
     std::cout << "Input Files Name : ";
     std::cin >> filesName;
