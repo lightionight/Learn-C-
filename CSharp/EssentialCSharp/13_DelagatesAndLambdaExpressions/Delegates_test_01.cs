@@ -8,5 +8,6 @@ public class Program{
 }
 
 public class Personal{
-    delegate void Mydel(int x);
+    public delegate void Mydel(int x);
+    public delegate void MessageDelegate(string message);
 }
