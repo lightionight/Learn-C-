@@ -1,6 +1,6 @@
 # Compier Files
 *.exe
-**.cache
+**/**.cache
 
 # Folders
 **/bin/*
