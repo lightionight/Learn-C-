@@ -1,0 +1,83 @@
+{
+    "version" :"2.0.0",
+    "tasks":[
+        {
+            "type": "shell",
+            "label": "C Build",
+            "command": "gcc",
+            "args": [
+                "-std=c11",
+                "${file}",
+                "-I",
+                "${workspaceFolder}/C/include",
+                "-o",
+                "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "C++ Build",
+            "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++11",
+                "-g",
+                "${file}",
+                "-I",
+                "${workspaceFolder}/Cpp/include",
+                "-I",
+                "${workspaceFolder}/Cpp/LearnCppCom/ProgramWithMultiFiles",
+                "-o",
+                "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "C# build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}\\Debug\\${fileBasenameNoExtension}.exe",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "C# publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/CSharp/EssentialCSharp/Chapter01/Chapter01.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "C# watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/CSharp/EssentialCSharp/Chapter01/Chapter01.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
